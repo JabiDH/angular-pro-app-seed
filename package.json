@@ -37,7 +37,7 @@
     "sass-loader": "6.0.6",
     "typescript": "2.4.1",
     "webpack": "3.0.0",
-    "webpack-dev-server": "2.5.0"
+    "webpack-dev-server": "3.1.11"
   },
   "dependencies": {
     "@angular/animations": "4.3.0",
