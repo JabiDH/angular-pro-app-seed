@@ -14,10 +14,10 @@ export const ROUTES: Routes = [
         CommonModule,
         RouterModule.forChild(ROUTES),
         SharedModule
-      ],
-      declarations: [
-          RegisterComponent
-      ]      
+    ],
+    declarations: [
+        RegisterComponent
+    ]      
 })
 
 export class RegisterModule{
