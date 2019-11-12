@@ -31,6 +31,10 @@ export class AuthService {
         private strore: Store
     ) { }
 
+    get user() {
+        return this.af.auth.currentUser;
+    }
+
     get authState() {
         return this.af.authState;
     }
