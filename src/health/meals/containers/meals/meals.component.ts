@@ -7,25 +7,21 @@ import { Store } from 'store';
 @Component({
   selector: 'meals',
   styleUrls: ['meals.component.scss'],
-  template: `
-    <div>
-      {{ meals$ | async | json}}
-    </div>
-  `
+  templateUrl: 'meals.template.html'
 })
 export class MealsComponent implements OnInit, OnDestroy {
-  
+
   meals$: Observable<Meal[]>;
   subscription: Subscription;
-  
+
   constructor(
     private mealsService: MealsService,
     private store: Store
-  ) {}
+  ) { }
 
   ngOnInit() {
     this.meals$ = this.store.select<Meal[]>('meals');
-    this.subscription = this.mealsService.meals$.subscribe();    
+    this.subscription = this.mealsService.meals$.subscribe();
   }
 
   ngOnDestroy() {
